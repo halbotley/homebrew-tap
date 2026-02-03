@@ -5,7 +5,6 @@ class Timely < Formula
   license "MIT"
   head "https://github.com/halbotley/timely.git", branch: "main"
 
-  depends_on xcode: ["14.0", :build]
   depends_on :macos
 
   def install
@@ -14,6 +13,6 @@ class Timely < Formula
   end
 
   test do
-    system "#{bin}/timely", "--help"
+    system "#{bin}/timely", "list"
   end
 end

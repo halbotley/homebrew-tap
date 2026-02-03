@@ -5,7 +5,6 @@ class Calmly < Formula
   license "MIT"
   head "https://github.com/halbotley/calmly.git", branch: "main"
 
-  depends_on xcode: ["14.0", :build]
   depends_on :macos
 
   def install
@@ -14,6 +13,6 @@ class Calmly < Formula
   end
 
   test do
-    system "#{bin}/calmly", "--help"
+    system "#{bin}/calmly", "list"
   end
 end
